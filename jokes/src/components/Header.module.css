@@ -1,0 +1,21 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.brand {
+    color: aliceblue !important;
+    font-family: 'Henny Penny', sans-serif;
+    font-size: 35px !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link {
+    color: aliceblue !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px !important;
+    text-transform: capitalize;
+    text-decoration: none;
+}

@@ -1,0 +1,6 @@
+.bg {
+    background-image: url('/public/images/joker1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
