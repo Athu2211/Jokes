@@ -1,31 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
 import Joke from "./Joke";
 import Loading from "../Loading";
 import styles from "./Jokes.module.css";
+import Pagination from "../Pagination";
+import { Container } from "react-bootstrap";
 
 function Jokes(props) {
   const jokes = useSelector(state => state.jokes);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [jokesPerPage] = useState(20);
+
+  const indexOfLastJoke = currentPage * jokesPerPage;
+  const indexOfFirstJoke = indexOfLastJoke - jokesPerPage;
+  const currentJokes = jokes.slice(indexOfFirstJoke, indexOfLastJoke);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
+    <>
     <div className={styles.bg}>
       {!jokes.length ? (
-      <>
-        <Loading />
-      </>
+        <>
+          <Loading />
+        </>
       ) : (
-      <Container>
-        <Row>
-          {jokes.map(joke => (
-            <Col xs={6} md={4} lg={3}>
-              <Joke joke={joke} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
+        <>
+          <Joke jokes={currentJokes} />
+          <Pagination
+            jokesPerPage={jokesPerPage}
+            totalJokes={jokes.length}
+            paginate={paginate}
+          />
+        </>
       )}
     </div>
+    </>
   );
 }
 

@@ -1,20 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Pagination.module.css';
 
-const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ jokesPerPage, totalJokes, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalJokes / jokesPerPage); i++) {
     pageNumbers.push(i);
   }
 
   return (
-    <nav>
+    <nav className={styles.outer}>
       <ul className='pagination'>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='!#' className='page-link'>
+            <Link onClick={() => paginate(number)} to='/jokes' className='page-link'>
               {number}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

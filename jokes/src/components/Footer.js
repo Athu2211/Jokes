@@ -6,27 +6,27 @@ function Footer(props) {
     <div className={styles.footer}>
       <ul>
         <li>
-          <a href="#" target="_blank">
+          <a href="https://www.twitter.com" target="_blank">
             <i className="fa fa-twitter"></i>
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="https://www.facebook.com" target="_blank">
             <i className="fa fa-facebook"></i>
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
-            <i className="fa fa-snapchat"></i>
+          <a href="https://www.youtube.com" target="_blank">
+            <i className="fa fa-youtube"></i>
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="https://www.pinterest.com/" target="_blank">
             <i className="fa fa-pinterest"></i>
           </a>
         </li>
         <li>
-          <a href="#" target="_blank">
+          <a href="https://www.github.com/" target="_blank">
             <i className="fa fa-github"></i>
           </a>
         </li>

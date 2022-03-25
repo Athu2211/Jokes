@@ -1,7 +1,6 @@
 .header {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(0, 0, 0) !important;
   padding: 0 50px;
-  margin-bottom: 20px;
 }
 
 .brand {

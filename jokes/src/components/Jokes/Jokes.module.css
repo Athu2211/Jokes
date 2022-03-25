@@ -1,6 +1,6 @@
 .bg {
-    background-image: url('/public/images/joker1.jpg');
-    height: 100vh;
+    background-image: url('/public/images/clown2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }

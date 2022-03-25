@@ -1,53 +1,60 @@
 import React from "react";
-import { Container, Carousel } from "react-bootstrap";
-// import clown1 from '../images/clown1.jpg';
-// import clown2 from '../images/clown2.jpg';
-// import joker2 from '../images/joker2.jpg';
-import styles from './Home.module.css';
+import { Carousel, Button } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import styles from "./Home.module.css";
 
 function Home(props) {
   return (
-    <Container>
-      <Carousel >
-        <Carousel.Item >
+    <>
+      <Carousel>
+        <Carousel.Item>
           <img
             className="d-block w-100"
-            src={'/images/clown1.jpg'}
+            src={"/images/clown1.jpg"}
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className={styles.caption}>
+            <h3>Charlie Chaplin</h3>
+            <p>
+              "I remain just one thing, and one thing only - and that is a
+              clown. It places me on a far higher plane than any politician."
+            </p>
+            <Button variant="outline-light"><Link to="/jokes" style={{textDecoration:'none', color:'white'}}>For More Jokes</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item >
+        <Carousel.Item>
           <img
             className="d-block w-100"
-            src={'/images/clown2.jpg'}
+            src={"/images/clown2.jpg"}
             alt="Second slide"
           />
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className={styles.caption}>
+            <h3>Joker</h3>
+            <p>
+              “I used to think my life was a tragedy, but now I realize it’s a
+              comedy.”{" "}
+            </p>
+            <Button variant="outline-light"><Link to="/jokes" style={{textDecoration:'none', color:'white'}}>For More Jokes</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item >
+        <Carousel.Item>
           <img
             className="d-block w-100 h-100"
-            src={'/images/joker2.jpg'}
+            src={"/images/joker2.jpg"}
             alt="Third slide"
           />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
+          <Carousel.Caption className={styles.caption}>
+            <h3>Norm MacDonald</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              Comedy is surprises, so if you're intending to make somebody laugh
+              and they don't laugh, that's funny.
             </p>
+            <Button variant="outline-light"><Link to="/jokes" style={{textDecoration:'none', color:'white'}}>For More Jokes</Link></Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </Container>
+    </>
   );
 }
 

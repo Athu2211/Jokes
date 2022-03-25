@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Home from "./components/Home";
@@ -16,7 +16,7 @@ function App() {
   });
 
   return (
-    <div className="bg">
+    <>
       <Router>
         <Header />
         <Switch>
@@ -25,7 +25,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </>
   );
 }
 
