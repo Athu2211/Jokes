@@ -4,7 +4,6 @@ import Joke from "./Joke";
 import Loading from "../Loading";
 import styles from "./Jokes.module.css";
 import Pagination from "../Pagination";
-import { Container } from "react-bootstrap";
 
 function Jokes(props) {
   const jokes = useSelector(state => state.jokes);
